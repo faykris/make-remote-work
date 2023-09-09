@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+*, *::after, *::before {
+    margin: 0;
+	box-sizing: border-box;
+}
+:root {
+    --almost-white: hsl(0, 0%, 98%);
+    --medium-gray: hsl(0, 0%, 41%);
+    --almost-black: hsl(0, 0%, 8%);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--almost-white);
+    font-family: 'Epilogue', sans-serif;
+}
