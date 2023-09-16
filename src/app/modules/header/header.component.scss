@@ -3,6 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 4rem;
 }
 
 .left-options, .right-options {
@@ -22,6 +23,7 @@
   color: var(--medium-gray);
   transition: all .3s;
   position: relative;
+  padding-bottom: 1rem;
 }
 
 .logo{
@@ -37,29 +39,30 @@
   transition: all .3s;
 }
 
-.left-options li a:hover,
-.right-options li a:hover {
-  color: var(--almost-black);
+.link {
+  position: relative;
 }
 
-.dropdown {
+.link .dropdown {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
+  background-color: var(--almost-white) ;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
   z-index: 1;
+  transition: all .2s;
+  border-radius: 8px;
+  top: 1.7rem;
 }
 
 .dropdown ul li {
   padding: 12px 16px;
   text-decoration: none;
-  display: block;
 }
 
 .dropdown ul li {
-  background-color: #ddd;
   margin: 0;
+  padding: 1rem 1.2rem;
 }
 
 .dropdown ul {
@@ -67,12 +70,42 @@
   padding: 0;
 }
 
+.dropdown ul li img{
+  margin-right: .5rem;
+}
+
 .link:hover .dropdown {
   display: block;
+}
+
+.left {
+  right: 0;
+}
+
+/*
+* Hover status
+*/
+
+.left-options li:hover a,
+.right-options li:hover a {
+  color: var(--almost-black);
+}
+
+.dropdown ul li:hover {
+  background-color: #ddd;
 }
 
 .register-btn:hover {
   background-color: var(--almost-black);
   color: var(--almost-white);
   border-color: var(--almost-black);
+}
+
+/*
+* Media Queries
+* for different screen sizes
+*/
+
+@media screen and (m) {
+  
 }
