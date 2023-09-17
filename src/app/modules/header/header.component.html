@@ -44,12 +44,12 @@
         </ul>
       </div>
     </li>
-    <li>
+    <li class="link">
       <a routerLink="/careers">
         Careers
       </a>
     </li>
-    <li>
+    <li class="link">
       <a routerLink="/about">
         About
       </a>
@@ -65,4 +65,87 @@
       </button>
     </li>
   </ul>
+  <div class="mobile-nav" (click)="enableDisableRightMenu()">
+    <img src="assets/images/icon-menu.svg" alt="Icon Menu">
+  </div>
 </header>
+
+<!-- Modal Nav options - Only mobile screens -->
+<div *ngIf="isRightMenu" class="modal-shadow">
+  <div class="right-menu">
+    <div class="close-icon" (click)="enableDisableRightMenu()">
+      <img src="assets/images/icon-close-menu.svg" alt="Icon Close">
+    </div>
+    <div class="nav-items">
+      <div class="item">
+        <div class="item-label" (click)="enableDisableFeatures()">
+          Features
+          <img *ngIf="!isFeatures" src="assets/images/icon-arrow-down.svg" alt="Arrow Down">
+          <img *ngIf="isFeatures" src="assets/images/icon-arrow-up.svg" alt="Arrow Up">
+        </div>
+        <ul *ngIf="isFeatures">
+          <li>
+            <div class="img-container">
+              <img src="assets/images/icon-todo.svg" alt="Todo Icon">
+            </div>
+            Todo list
+          </li>
+          <li>
+            <div class="img-container">
+              <img src="assets/images/icon-calendar.svg" alt="Calendar Icon">
+            </div>
+            Calendar
+          </li>
+          <li>
+            <div class="img-container">
+              <img src="assets/images/icon-reminders.svg" alt="Reminders Icon">
+            </div>
+            Reminders
+          </li>
+          <li>
+            <div class="img-container">
+              <img src="assets/images/icon-planning.svg" alt="Icon Planning">
+            </div>
+            Planning
+          </li>
+        </ul>
+      </div>
+      <div class="item">
+        <div class="item-label" (click)="enableDisableCompany()">
+          Company
+          <img *ngIf="!isCompany" src="assets/images/icon-arrow-down.svg" alt="Arrow Down">
+          <img *ngIf="isCompany" src="assets/images/icon-arrow-up.svg" alt="Arrow Up">
+        </div>
+        <ul *ngIf="isCompany">
+          <li>
+            History
+          </li>
+          <li>
+            Our Team
+          </li>
+          <li>
+            Blog
+          </li>
+        </ul>
+      </div>
+      <div class="item">
+        <div class="item-label">
+          Carrers
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-label">
+          About
+        </div>
+      </div>
+      <div class="login-item">
+        Login
+      </div>
+      <div class="button-item">
+        <button>
+          Register
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
