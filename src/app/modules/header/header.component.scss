@@ -23,7 +23,7 @@
   color: var(--medium-gray);
   transition: all .3s;
   position: relative;
-  padding-bottom: 1rem;
+  padding: 1rem 0;
 }
 
 .logo{
@@ -31,16 +31,32 @@
 }
 
 .register-btn {
+  font-size: 18px;
   border: 1px solid var(--medium-gray);
-  border-radius: 8px;
+  border-radius: 12px;
   background-color: var(--almost-white);
   color: var(--medium-gray);
-  padding: .4rem .9rem;
+  padding: .5rem 1.2rem;
   transition: all .3s;
 }
 
 .link {
   position: relative;
+}
+
+.link a {
+  display: flex;
+}
+
+.arrow-icon {
+  margin-left: .5rem;
+  margin-top: .4rem;
+  width: .7rem;
+  height: .5rem;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-image: url('../../../assets/images/icon-arrow-down.svg');
+  transition: all .3s;
 }
 
 .link .dropdown {
@@ -52,7 +68,7 @@
   z-index: 1;
   transition: all .2s;
   border-radius: 8px;
-  top: 1.7rem;
+  top: 3rem;
 }
 
 .dropdown ul li {
@@ -86,6 +102,10 @@
 * Hover status
 */
 
+.left-options li:hover a .arrow-icon {
+  background-image: url('../../../assets/images/icon-arrow-up.svg');
+}
+
 .left-options li:hover a,
 .right-options li:hover a {
   color: var(--almost-black);
@@ -113,7 +133,6 @@
 * Media Queries
 * for mobile screen sizes
 */
-
 
 @media screen and (max-width: 780px) {
   .left-options li:first-child {
@@ -190,6 +209,11 @@
   .item ul li {
     display: flex;
     align-items: center;
+    transition: all .3s;
+  }
+
+  .item ul li:hover {
+    background-color: #ddd;
   }
 
   .item ul li .img-container {
