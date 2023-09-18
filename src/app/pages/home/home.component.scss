@@ -12,13 +12,15 @@
 .hero-content,
 .hero-img-desktop {
   width: 47%;
-  min-height: 30rem;
+  display: grid;
+  align-items: end;
+  min-height: 34rem;
   margin: 0 2rem 0 4rem;
 }
 
 .hero-description h1 {
   margin: 2rem 0;
-  font-size: 3em;
+  font-size: 4.7vw;
 }
 
 .hero-img-desktop {
@@ -41,8 +43,8 @@
 
 .hero-btn-area button {
   border: 1px solid var(--almost-black);
-  color: var(--almost-black);
-  background-color: var(--almost-white);
+  color: var(--almost-white);
+  background-color: var(--almost-black);
   cursor: pointer;
   border-radius: 14px;
   padding: .7rem 1.2rem;
@@ -64,8 +66,8 @@
 }
 
 .hero-btn-area button:hover {
-  background-color: var(--almost-black);
-  color: var(--almost-white);
+  background-color:  var(--almost-white);
+  color: var(--almost-black);
   border-color: var(--almost-black);
 }
 
