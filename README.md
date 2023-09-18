@@ -1,5 +1,8 @@
 # Frontend Mentor - Intro section with dropdown navigation
 
+## URL Project
+[Click here to open!](https://charming-meerkat-7a38f6.netlify.app/home)
+
 ![Design preview for the Intro section with dropdown navigation coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
